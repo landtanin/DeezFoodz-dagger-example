@@ -26,6 +26,7 @@ import android.app.Application;
 
 import com.raywenderlich.android.deezfoodz.dagger.AppComponent;
 import com.raywenderlich.android.deezfoodz.dagger.AppModule;
+import com.raywenderlich.android.deezfoodz.dagger.DaggerAppComponent;
 
 public class DeezFoodzApplication extends Application {
 
@@ -34,6 +35,7 @@ public class DeezFoodzApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
+      appComponent = initDagger(this);
   }
 
     protected AppComponent initDagger(DeezFoodzApplication application) {
