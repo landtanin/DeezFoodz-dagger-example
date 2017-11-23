@@ -25,6 +25,7 @@ package com.raywenderlich.android.deezfoodz.app;
 import android.app.Application;
 
 import com.raywenderlich.android.deezfoodz.dagger.AppComponent;
+import com.raywenderlich.android.deezfoodz.dagger.AppModule;
 
 public class DeezFoodzApplication extends Application {
 
@@ -34,6 +35,12 @@ public class DeezFoodzApplication extends Application {
   public void onCreate() {
     super.onCreate();
   }
+
+    protected AppComponent initDagger(DeezFoodzApplication application) {
+        return DaggerAppComponent.builder()
+                .appModule(new AppModule(application))
+                .build();
+    }
 
   public AppComponent getAppComponent() {
     return appComponent;
