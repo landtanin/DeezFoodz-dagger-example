@@ -15,6 +15,10 @@ import dagger.Provides;
 @Module
 public class PresenterModule {
 
+    /**
+     * specifying that a FoodzPresenter will be provided, and that the presenter returned will be the concrete implementation FoodzPresenterImpl.
+     * @return
+     */
     @Provides
     @Singleton
     FoodzPresenter provideFoodzPresenter() {
