@@ -62,6 +62,9 @@ public class FoodzActivity extends AppCompatActivity implements FoodzView {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_foodz);
 
+    /**
+     * Dagger knows that provideFoodzPresenter() is defined in the PresenterModule class, and uses it to create the injected FoodzPresenter object.
+     */
     ((DeezFoodzApplication)getApplication()).getAppComponent().inject(this);
 
     ButterKnife.bind(this);

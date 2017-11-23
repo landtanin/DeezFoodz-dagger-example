@@ -35,6 +35,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.raywenderlich.android.deezfoodz.R;
+import com.raywenderlich.android.deezfoodz.app.DeezFoodzApplication;
 import com.raywenderlich.android.deezfoodz.app.StringUtils;
 import com.raywenderlich.android.deezfoodz.model.Food;
 import com.raywenderlich.android.deezfoodz.model.FoodzItem;
@@ -74,6 +75,8 @@ public class FoodActivity extends AppCompatActivity implements FoodView {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_food);
 
+    ((DeezFoodzApplication)getApplication()).getAppComponent().inject(this);
+
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -81,7 +84,7 @@ public class FoodActivity extends AppCompatActivity implements FoodView {
 
     String foodId = getIntent().getStringExtra(EXTRA_FOOD_ID);
 
-    presenter = new FoodPresenterImpl();
+//    presenter = new FoodPresenterImpl();
     presenter.setView(this);
     presenter.getFood(foodId);
   }
