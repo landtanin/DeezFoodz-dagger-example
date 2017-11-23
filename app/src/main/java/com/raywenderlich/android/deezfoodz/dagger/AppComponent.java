@@ -1,5 +1,7 @@
 package com.raywenderlich.android.deezfoodz.dagger;
 
+import com.raywenderlich.android.deezfoodz.ui.foodz.FoodzActivity;
+
 import javax.inject.Singleton;
 
 import dagger.Component;
@@ -14,4 +16,7 @@ import dagger.Component;
 @Singleton
 @Component(modules = {AppModule.class})
 public interface AppComponent {
+
+    void inject(FoodzActivity target);
+
 }
