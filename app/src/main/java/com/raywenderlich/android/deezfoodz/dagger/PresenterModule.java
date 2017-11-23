@@ -26,13 +26,13 @@ public class PresenterModule {
     @Provides
     @Singleton
     FoodzPresenter provideFoodzPresenter(Context context) {
-        return new FoodzPresenterImpl();
+        return new FoodzPresenterImpl(context);
     }
 
     @Provides
     @Singleton
     FoodPresenter provideFoodPresenter(Context context) {
-        return new FoodPresenterImpl();
+        return new FoodPresenterImpl(context);
     }
 
 }

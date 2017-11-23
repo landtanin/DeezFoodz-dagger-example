@@ -44,7 +44,7 @@ public class NetworkModule {
 
     @Provides
     @Singleton
-    UsdaApi provideUsdaApi(Retrofit retrofit){
+    UsdaApi provideUsdaApi(Retrofit retrofit) {
         return retrofit.create(UsdaApi.class);
     }
 

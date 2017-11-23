@@ -1,9 +1,9 @@
 package com.raywenderlich.android.deezfoodz.dagger;
 
 import com.raywenderlich.android.deezfoodz.ui.food.FoodActivity;
-import com.raywenderlich.android.deezfoodz.ui.food.FoodPresenter;
+import com.raywenderlich.android.deezfoodz.ui.food.FoodPresenterImpl;
 import com.raywenderlich.android.deezfoodz.ui.foodz.FoodzActivity;
-import com.raywenderlich.android.deezfoodz.ui.foodz.FoodzPresenter;
+import com.raywenderlich.android.deezfoodz.ui.foodz.FoodzPresenterImpl;
 
 import javax.inject.Singleton;
 
@@ -24,8 +24,8 @@ public interface AppComponent {
 
     void inject(FoodActivity target);
 
-    void inject(FoodzPresenter target);
+    void inject(FoodzPresenterImpl target);
 
-    void inject(FoodPresenter target);
+    void inject(FoodPresenterImpl target);
 
 }
