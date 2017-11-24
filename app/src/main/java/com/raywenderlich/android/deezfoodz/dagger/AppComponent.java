@@ -17,7 +17,10 @@ import dagger.Component;
  *  Tell Dagger that AppComponent is a singleton component interface for the app. The @Component annotation takes a list of modules as an input
  */
 @Singleton
-@Component(modules = {AppModule.class, PresenterModule.class, NetworkModule.class})
+@Component(modules = {
+        AppModule.class,
+        PresenterModule.class,
+        NetworkModule.class})
 public interface AppComponent {
 
     void inject(FoodzActivity target);
